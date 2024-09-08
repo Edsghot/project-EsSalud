@@ -18,8 +18,8 @@ import { CentroSaludService } from './modulos/centro-salud/centro-salud.service'
       synchronize: true,         
     }),
     UsuarioModule,
-    CentroSaludModule,],
-  controllers: [CentroSaludController],
-  providers: [CentroSaludService],
+    CentroSaludModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
