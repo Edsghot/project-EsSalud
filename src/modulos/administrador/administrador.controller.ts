@@ -33,4 +33,9 @@ export class AdministradorController {
         return await this.administradorService.deleteUser(id);
     }
 
+    @Post('login')
+    async loginUser(@Body() request: LoginDto) {
+        return await this.administradorService.Login(request);
+    }
+
 }
