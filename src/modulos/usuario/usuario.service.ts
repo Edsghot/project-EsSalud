@@ -24,6 +24,15 @@ export class UsuarioService {
               }
            }
 
+           
+          var mail = await this.userRepository.findOne({where: {email: request.email}});
+
+          if(user){
+             return {
+                 msg: "ya existe un usuario con este email",success: false
+             }
+          }
+
            var centro = await this.centroRepository.findOne({where:{idCentroSalud: request.idCentroSalud}});
 
            if(!centro){
