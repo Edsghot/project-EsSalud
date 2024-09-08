@@ -27,7 +27,7 @@ export class UsuarioService {
            
           var mail = await this.userRepository.findOne({where: {email: request.email}});
 
-          if(user){
+          if(mail){
              return {
                  msg: "ya existe un usuario con este email",success: false
              }
