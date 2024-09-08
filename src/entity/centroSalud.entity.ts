@@ -1,5 +1,6 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Usuario } from "./usuario.entity";
+import { Administrador } from "./administrador.entity";
 
 @Entity('tCentroSalud')
 export class CentroSalud{
@@ -25,5 +26,8 @@ export class CentroSalud{
     departamento: string;
 
     @OneToMany(() => Usuario, usuario => usuario.CentroSalud)
-    centroSalud: CentroSalud[]; 
+    usuario: Usuario[]; 
+
+    @OneToMany(() => Administrador, admin => admin.CentroSalud)
+    administrador: Administrador[]; 
 }
