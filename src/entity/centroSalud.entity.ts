@@ -19,11 +19,11 @@ export class CentroSalud{
     codigo: string;
 
     @Column()
-    Email: string;
+    email: string;
 
     @Column()
-    Departamento: string;
+    departamento: string;
 
     @OneToMany(() => Usuario, usuario => usuario.CentroSalud)
-    CentroSalud: CentroSalud[]; 
+    centroSalud: CentroSalud[]; 
 }

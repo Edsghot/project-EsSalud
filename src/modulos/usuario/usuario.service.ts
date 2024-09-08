@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { insertUsuarioDto } from 'src/dto/insertUsuario.dto';
+import { LoginDto } from 'src/dto/login.dto';
 import { updateUsuarioDto } from 'src/dto/updateUsuarioDto.dto';
 import { CentroSalud } from 'src/entity/centroSalud.entity';
 import { Usuario } from 'src/entity/usuario.entity';
@@ -122,6 +123,20 @@ export class UsuarioService {
         } catch (error) {
             console.error('Failed to delete user:', error);
             return { msg: 'Failed to delete user', detailMsg: error, success: false };
+        }
+    }    
+    async Login(request: LoginDto) {
+        try {
+            const user = await this.userRepository.findOne({where: {email: request.email,password: request.password}});
+    
+            if (!user) {
+                return { msg: 'Verifique su contrasena', success: false };
+            }
+
+            return { msg: 'logueado',data: user, success: true };
+        } catch (error) {
+            console.error('Failed to user:', error);
+            return { msg: 'Failed', detailMsg: error, success: false };
         }
     }    
     
