@@ -136,6 +136,11 @@ export class UsuarioService {
     }    
     async Login(request: LoginDto) {
         try {
+
+            if(!request.email || !request.email){
+                return { msg: 'Verifique que estes enviando bien, revisa los atributos', success: false };
+            }
+            
             const user = await this.userRepository.findOne({where: {email: request.email,password: request.password}});
     
             if (!user) {
