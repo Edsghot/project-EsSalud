@@ -23,7 +23,7 @@ export class UsuarioController {
         return await this.userService.getUserById(id);
     }
 
-    @Put('update/:id')
+    @Put('update')
     async updateUser(@Body() request: updateUsuarioDto) {
         return await this.userService.updateUser( request);
     }
