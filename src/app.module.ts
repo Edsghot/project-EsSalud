@@ -5,6 +5,7 @@ import { CentroSaludModule } from './modulos/centro-salud/centro-salud.module';
 import { CentroSaludController } from './modulos/centro-salud/centro-salud.controller';
 import { CentroSaludService } from './modulos/centro-salud/centro-salud.service';
 import { AdministradorModule } from './modulos/administrador/administrador.module';
+import { TurnosModule } from './modulos/turnos/turnos.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { AdministradorModule } from './modulos/administrador/administrador.modul
     }),
     UsuarioModule,
     CentroSaludModule,
-    AdministradorModule],
+    AdministradorModule,
+    TurnosModule],
   controllers: [],
   providers: [],
 })
