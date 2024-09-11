@@ -15,7 +15,7 @@ import { TurnosModule } from './modulos/turnos/turnos.module';
       port: 3306,                
       username: 'dbjhfjuv_edsghot',    
       password: 'Repro321.', 
-      database: 'dbjhfjuv_esSalud',    
+      database: 'dbjhfjuv_bambas',    
       entities: [__dirname + '/**/*.entity{.ts,.js}'], 
       synchronize: true,         
     }),
