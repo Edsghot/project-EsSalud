@@ -13,7 +13,7 @@ export class Turnos {
     EndDate: Date;
 
     @Column()
-    Dia: Date;
+    Dia: string;
 
     @Column()
     IdUser: number;
