@@ -7,11 +7,7 @@ export class Turnos {
     id: number;
 
     @Column()
-    StartDate: Date;
-
-    @Column()
-    EndDate: Date;
-
+    Turno: string;
     @Column()
     Dia: string;
 
