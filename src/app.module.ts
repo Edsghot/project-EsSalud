@@ -9,15 +9,15 @@ import { TurnosModule } from './modulos/turnos/turnos.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',             
-      host: 'jhedgost.com',        
-      port: 3306,                
-      username: 'dbjhfjuv_edsghot',    
-      password: 'Repro321.', 
-      database: 'dbjhfjuv_esSalud',    
-      entities: [__dirname + '/**/*.entity{.ts,.js}'], 
-      synchronize: true,         
+    TypeOrmModule.forRoot(    {
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root', 
+      password: '', 
+      database: 'db_pagWeb',
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: false,
     }),
     UsuarioModule,
     CentroSaludModule,
